@@ -1,10 +1,12 @@
-import { useState } from "react";
-import "./App.css";
+import Body from './components/Body'
 
-export default function App() {
+import { placeholderCardData, testArray } from './ItemData'
+
+
+function App() {
   return (
     <>
-      <h1>APP FUNCTION</h1>
+        <Body/>
     </>
   );
 }
