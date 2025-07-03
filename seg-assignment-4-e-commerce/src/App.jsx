@@ -1,12 +1,13 @@
-import Body from './components/Body'
+import Body from "./components/Body";
+import NavHeader from "./components/NavHeader";
 
-import { placeholderCardData, testArray } from './ItemData'
+import { placeholderCardData, testArray } from "./ItemData";
 
-
-function App() {
+export default function App() {
   return (
     <>
-        <Body/>
+      <NavHeader />
+      <Body />
     </>
   );
 }
