@@ -1,6 +1,6 @@
 import Card from "./Card";
 import SideBar from "./SideBar";
-import { placeholderCardData, testArray } from "../ItemData";
+import { placeholderCardData } from "../ItemData";
 
 function Body() {
   return (
@@ -11,7 +11,7 @@ function Body() {
         </div>
         <div className="flex-grow-1 p-4">
           <div className="row gx-3 gy-3">
-            {testArray.map((currItemData) => (
+            {placeholderCardData.map((currItemData) => (
               <div className="col-3">
                 <Card cardData={currItemData} />
               </div>

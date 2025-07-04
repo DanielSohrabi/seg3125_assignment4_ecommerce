@@ -1,12 +1,42 @@
-export const placeholderCardData = {
-    name: "Item Name",
-    categories: ['Item Category 1'],
+export const placeholderCardData = [
+  {
+    name: "Phones/Apple",
+    categories: ["Phones", "Apple"],
     imageUrl: "1",
-    manufacturers: ['Manufacturer 1'],
+    manufacturers: ["Manufacturer 1"],
     countryOfProduction: "Canada",
-    currentPrice: "999.9",
+    currentPrice: "500",
     isOnSale: false,
-    previousPrice: "1" 
-}
-
-export const testArray = [placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData,placeholderCardData]
+    previousPrice: "1",
+  },
+  {
+    name: "Laptops/Apple",
+    categories: ["Laptops", "Apple"],
+    imageUrl: "1",
+    manufacturers: ["Laptops"],
+    countryOfProduction: "Canada",
+    currentPrice: "1000",
+    isOnSale: false,
+    previousPrice: "1",
+  },
+  {
+    name: "Samsung/Laptops",
+    categories: ["Samsung", "Laptops"],
+    imageUrl: "1",
+    manufacturers: ["Manufacturer 1"],
+    countryOfProduction: "Canada",
+    currentPrice: "1500",
+    isOnSale: false,
+    previousPrice: "1",
+  },
+  {
+    name: "Phones",
+    categories: ["Phones"],
+    imageUrl: "1",
+    manufacturers: ["Manufacturer 1"],
+    countryOfProduction: "Canada",
+    currentPrice: "100",
+    isOnSale: false,
+    previousPrice: "1",
+  },
+];
