@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-export default function NavHeader() {
+export default function NavHeader({ searchQuery, setSearchQuery }) {
   return (
     <Navbar
       expand="lg"
@@ -23,6 +23,8 @@ export default function NavHeader() {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </Form>
           </Nav>

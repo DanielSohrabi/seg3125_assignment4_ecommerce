@@ -1,7 +1,7 @@
 export const placeholderCardData = [
   {
     name: "Phones/Apple",
-    categories: ["Phones", "Apple"],
+    categories: ["Phones", "Apple", "Under $1000"],
     imageUrl: "1",
     manufacturers: ["Manufacturer 1"],
     countryOfProduction: "Canada",
@@ -11,7 +11,7 @@ export const placeholderCardData = [
   },
   {
     name: "Laptops/Apple",
-    categories: ["Laptops", "Apple"],
+    categories: ["Laptops", "Apple", "$1000 and over"],
     imageUrl: "1",
     manufacturers: ["Laptops"],
     countryOfProduction: "Canada",
@@ -21,7 +21,7 @@ export const placeholderCardData = [
   },
   {
     name: "Samsung/Laptops",
-    categories: ["Samsung", "Laptops"],
+    categories: ["Samsung", "Laptops", "$1000 and over"],
     imageUrl: "1",
     manufacturers: ["Manufacturer 1"],
     countryOfProduction: "Canada",
@@ -31,7 +31,7 @@ export const placeholderCardData = [
   },
   {
     name: "Phones",
-    categories: ["Phones"],
+    categories: ["Phones", "Under $1000"],
     imageUrl: "1",
     manufacturers: ["Manufacturer 1"],
     countryOfProduction: "Canada",
