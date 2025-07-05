@@ -5,5 +5,23 @@
 .pearstore {
     font-style: italic;
     font-weight: bolder;
-    font-size: 42px !important;
+    font-size: 40px !important;
+    color: white !important;
+    position: relative;
+    right: 20px;
+    cursor: pointer;
+}
+
+.searchbar {
+    width: 1250px !important;
+}
+
+.navbar {
+    background-color: #023020 !important;
+}
+
+.cartText {
+    color: white;
+    position: relative;
+    left:7px;
 }

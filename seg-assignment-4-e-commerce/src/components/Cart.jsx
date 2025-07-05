@@ -43,7 +43,7 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState }) {
                 cartItems={cartItems}
             />
             }
-            <Button className="px-5" onClick={handleHomeBackClick} variant="secondary">
+            <Button className="px-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
               Back to Shop
             </Button>
           </div>

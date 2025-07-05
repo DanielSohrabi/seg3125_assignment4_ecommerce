@@ -3,7 +3,7 @@
 }
 .card-custom {
     border-radius: 20px !important;
-    width: 375px;
+    width: 350px;
     height: 500px !important;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .on-sale {
-    box-shadow: 0 4px 8px 0 rgba(216, 89, 89, 0.2), 0 6px 20px 0 rgba(196, 33, 33, 0.685);
+    box-shadow: 0 4px 8px 0 #02302071, 0 6px 20px 0 #0230207a;
 }
 
 .sale-text {
@@ -58,16 +58,20 @@
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     position: relative;
-    bottom: 467px;
+    bottom: 443px;
     color: rgb(255, 255, 255);
     font-size: 48px;
     text-shadow: 0 0 3px #000000;
-    background-color: rgb(82, 13, 13);
-    width: 375px;
+    background-color: #055237;
+    width: 350px;
     right: 17px;
 }
 
 .card-img {
     height:100px;
     width:100px !important;
+}
+
+.backToShop {
+    background-color: #023020 !important;
 }

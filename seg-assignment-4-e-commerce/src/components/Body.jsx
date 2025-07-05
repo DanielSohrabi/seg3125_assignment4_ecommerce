@@ -42,12 +42,12 @@ function Body({ searchQuery, addToCart, removeFromCart }) {
 
   return (
     <>
-      <div className="d-flex">
-        <div style={{ width: "250px" }}>
+      <div className="d-flex px-3">
+        <div style={{ width: "280px" }}>
           <SideBar filters={filters} toggleFilter={toggleFilter} />
         </div>
-        <div className="flex-grow-1 p-4">
-          <div className="row gx-3 gy-3">
+        <div className="flex-grow-1 p-4 mx-3">
+          <div className="row gx-5 gy-5">
             {filteredData.map((currItemData) => (
               <div className="col-3">
                 <Card

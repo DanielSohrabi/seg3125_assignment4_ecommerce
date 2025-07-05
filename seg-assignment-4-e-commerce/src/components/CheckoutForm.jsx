@@ -25,8 +25,9 @@ function CheckoutForm({ cartItems }) {
 
 
     const myStyle = {
-        activeBgColor: '#000000',
-        completedBgColor: '#808080' 
+        activeBgColor: '#067F53',
+        completedBgColor: '#023020' ,
+        inactiveBgColor: '#687771'
     }
 
     function clickNextStep() {

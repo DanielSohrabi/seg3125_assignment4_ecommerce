@@ -1,3 +1,16 @@
 .filters{
     margin-top: 30px;
 }
+
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.623) !important;
+}
+
+.filterText {
+    font-size: 48px !important;
+}
+
+
+.boldHeader {
+    font-weight: bold;
+}
