@@ -3,9 +3,10 @@ import CheckoutForm from "./CheckoutForm";
 import CardCondensed from "./CardCondensed";
 import Button from 'react-bootstrap/Button';
 
-function Cart({ cartItems, addToCart, removeFromCart, setPageState }) {
+function Cart({ cartItems, addToCart, removeFromCart, setPageState, setCartItems, setCartItemsCount }) {
     const [cartState, setCartState] = useState("Viewing");
     const [activeStep, setActiveStep] = useState(0);
+    
 
     function handleCheckoutClick() {
         setCartState("CheckingOut");
@@ -42,6 +43,8 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState }) {
             </> : 
             <CheckoutForm
                 cartItems={cartItems}
+                setCartItems={setCartItems}
+                setCartItemsCount={setCartItemsCount}
             />
             }
             <Button className="px-5 backToShop" onClick={handleHomeBackClick} variant="secondary">

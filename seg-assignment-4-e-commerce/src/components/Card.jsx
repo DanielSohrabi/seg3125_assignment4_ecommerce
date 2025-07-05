@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './Card.css'
 import PlaceholderImage from '../assets/placeholder.png'
 import Button from 'react-bootstrap/Button';
+import { ToastContainer, toast, Bounce} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Card(
     {
@@ -11,13 +13,25 @@ function Card(
         shouldShowAddToCart
     }
 ) {
+    const notify = () => toast.success('Item added to cart! 🍐', {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+    });
 
     function handleAddToCartClick() {
-      addToCart(cardData)
+      addToCart(cardData);
+      notify();
     }
 
     function handleRemoveFromCartClick() {
-      removeFromCart(cardData)
+      removeFromCart(cardData);
     }
 
     const name = cardData.name;

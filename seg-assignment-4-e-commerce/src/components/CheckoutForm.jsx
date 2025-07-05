@@ -9,7 +9,7 @@ import "./CheckoutForm.css";
 import PaymentPhoto from "../assets/USPaymentMethodsKlarna.JPG";
 import Survey from "./Survey";
 
-function CheckoutForm({ cartItems }) {
+function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
   const [activeStep, setActiveStep] = useState(0);
 
   const [cardHolderName, setCardHolderName] = useState("");
@@ -31,6 +31,10 @@ function CheckoutForm({ cartItems }) {
   };
 
   function clickNextStep() {
+    if (activeStep == 3) {
+        setCartItems([]);
+        setCartItemsCount(0);
+    }
     setActiveStep(activeStep + 1);
   }
 

@@ -2,6 +2,7 @@ import React from "react";
 import Body from "./components/Body";
 import Cart from "./components/Cart";
 import NavHeader from "./components/NavHeader";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 
 import { placeholderCardData } from "./ItemData";
 import { useState, useEffect } from "react";
@@ -41,6 +42,19 @@ export default function App() {
 
   return (
     <>
+      <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
       <NavHeader
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -60,6 +74,8 @@ export default function App() {
           addToCart={addToCart}
           removeFromCart={removeFromCart}
           setPageState={setPageState}
+          setCartItems={setCartItems}
+          setCartItemsCount={setCartItemsCount}
         />
       )}
     </>

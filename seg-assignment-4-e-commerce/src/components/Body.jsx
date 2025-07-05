@@ -2,8 +2,13 @@ import Card from "./Card";
 import SideBar from "./SideBar";
 import { placeholderCardData } from "../ItemData";
 import { React, useState } from "react";
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
+import './Body.css'
 
 function Body({ searchQuery, addToCart, removeFromCart }) {
+  const [show, setShow] = useState(true);
+
   const [filters, setFilters] = useState({
     brand: [],
     type: [],
@@ -42,6 +47,9 @@ function Body({ searchQuery, addToCart, removeFromCart }) {
 
   return (
     <>
+      <Alert variant="warning" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading><h1 className="text-center alertthing">🍐 HUGE SALE FOR A LIMITED TIME ONLY!</h1></Alert.Heading>
+      </Alert>
       <div className="d-flex px-3">
         <div style={{ width: "280px" }}>
           <SideBar filters={filters} toggleFilter={toggleFilter} />
@@ -49,7 +57,7 @@ function Body({ searchQuery, addToCart, removeFromCart }) {
         <div className="flex-grow-1 p-4 mx-3">
           <div className="row gx-5 gy-5">
             {filteredData.map((currItemData) => (
-              <div className="col-3">
+              <div className="col-12 col-sm-6 col-md-6 col-lg-3">
                 <Card
                   cardData={currItemData}
                   addToCart={addToCart}

@@ -26,9 +26,9 @@ function CardCondensed(
   return (
     <>
       <div className='card-component-x row justify-content-center align-items-center'>
-        <img className="col-2 card-img" src={PlaceholderImage}/>
-        <h1 className="text-start col-4">{name}</h1>
-        <h2 className="col-4">${isOnSale ? previousPrice : currentPrice}</h2>
+        <img className="col-2 card-img" src={imageUrl}/>
+        <h1 className="text-start col-8">{name}</h1>
+        <h2 className="col-2">${isOnSale ? previousPrice : currentPrice}</h2>
         <Button 
           className="col-2 button-2"
           onClick={handleRemoveFromCartClick}
