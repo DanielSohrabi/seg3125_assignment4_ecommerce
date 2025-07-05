@@ -46,6 +46,7 @@ export default function App() {
         setSearchQuery={setSearchQuery}
         cartItemsCount={cartItemsCount}
         setPageState={setPageState}
+        pageState={pageState}
       />
       {pageState == "Shop" ? (
         <Body

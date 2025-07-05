@@ -43,7 +43,7 @@ function Card(
       </div> */}
 
       <div class={`card card-custom ${isOnSale ? "on-sale" : ""}`}>
-        <img src={PlaceholderImage} class="card-img-top" alt="..."/>
+        <img src={imageUrl} class="card-img-top" alt="..."/>
         <div class={`card-body row `}>
           <div className="col-8">
             <h2 class="card-title">{name}</h2>

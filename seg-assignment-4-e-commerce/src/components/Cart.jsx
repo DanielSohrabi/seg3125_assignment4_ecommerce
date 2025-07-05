@@ -20,13 +20,14 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState }) {
         <div className="flex-grow-1 p-4">
           <div className="row gx-3 gy-3">
             {cartItems.length == 0 ? 
-                <p>Cart is Empty.</p> :
+                <h1 className="text-center py-5 my-5">Your cart is empty, nothing to see here!</h1> :
             cartState == "Viewing" ?
 
             <>
-                <button
+                <h1 className="text-center">Shopping Cart</h1>
+                {/* <Button variant='dark'
                     onClick={handleCheckoutClick}
-                >Checkout</button>
+                >Checkout</Button> */}
                 {cartItems.map((currItemData) => (
                 <div>
                     <CardCondensed
@@ -35,9 +36,9 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState }) {
                     />
                 </div>
                 ))}
-                <button
+                <Button variant='dark'
                     onClick={handleCheckoutClick}
-                >Checkout</button>
+                >Checkout</Button>
             </> : 
             <CheckoutForm
                 cartItems={cartItems}

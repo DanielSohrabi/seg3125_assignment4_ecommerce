@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavHeader.css"
 
-export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount, setPageState }) {
+export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount, setPageState, pageState }) {
 
   function handleCartClick() {
     setPageState("Cart")
@@ -27,7 +27,7 @@ export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount,
         <Navbar.Brand className="px-5 pearstore" onClick={handleIconClick}>pearStore 🍐</Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="flex-grow-1">
-            <Form className="d-flex searchbar">
+            {pageState == 'Shop' ? <Form className="d-flex searchbar">
               <Form.Control
                 type="search"
                 placeholder="Search"
@@ -36,7 +36,7 @@ export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount,
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-            </Form>
+            </Form>: ""}
           </Nav>
           <Nav className="pe-5">
             <Nav.Link onClick={handleCartClick}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-cart" viewBox="0 0 16 16">
