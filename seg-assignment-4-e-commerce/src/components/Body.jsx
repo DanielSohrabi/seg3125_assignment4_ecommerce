@@ -3,7 +3,7 @@ import SideBar from "./SideBar";
 import { placeholderCardData } from "../ItemData";
 import { React, useState } from "react";
 
-function Body({ searchQuery }) {
+function Body({ searchQuery, addToCart, removeFromCart }) {
   const [filters, setFilters] = useState({
     brand: [],
     type: [],
@@ -49,7 +49,12 @@ function Body({ searchQuery }) {
           <div className="row gx-3 gy-3">
             {filteredData.map((currItemData) => (
               <div className="col-3">
-                <Card cardData={currItemData} />
+                <Card
+                  cardData={currItemData} 
+                  addToCart={addToCart}
+                  removeFromCart={removeFromCart}
+                  shouldShowAddToCart={true}
+                />
               </div>
             ))}
           </div>

@@ -6,7 +6,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-export default function NavHeader({ searchQuery, setSearchQuery }) {
+export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount, setPageState }) {
+
+  function handleCartClick() {
+    setPageState("Cart")
+  }
+
   return (
     <Navbar
       expand="lg"
@@ -29,7 +34,7 @@ export default function NavHeader({ searchQuery, setSearchQuery }) {
             </Form>
           </Nav>
           <Nav className="pe-5">
-            <Nav.Link>CART</Nav.Link>
+            <Nav.Link onClick={handleCartClick}>CART: {cartItemsCount}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
