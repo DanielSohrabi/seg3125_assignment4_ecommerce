@@ -7,8 +7,8 @@ export const FILTERS = {
         OTHER: "Other"
     },
     types: {
-        COMPUTER: "Computer",
-        PHONE: "Phone",
+        WATCHES: "Smart Watches",
+        HEADPHONES: "Headphones",
         TABLET: "Tablet",
         ACCESSORIES: "Accessories"
     },

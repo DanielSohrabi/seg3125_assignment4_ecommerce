@@ -1,0 +1,24 @@
+.surveyCard{
+    padding: 2rem;
+    width: 70rem;
+}
+
+.emptyStars{
+    font-size: 4rem;
+    color: #ccc; 
+}
+
+.fullStars{
+    font-size: 4rem; 
+    color: #f5b50a;
+}
+
+.addComments{
+    margin-top: 20px;
+}
+
+.ratingGroup{
+    margin-top: 10px;
+    padding: 0;
+}
+

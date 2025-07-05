@@ -7,22 +7,22 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import "./CheckoutForm.css"
 import PaymentPhoto from '../assets/USPaymentMethodsKlarna.JPG'
+import Survey from './Survey'
 
 function CheckoutForm({ cartItems }) {
-    const [activeStep, setActiveStep] = useState(0);
-    
-    const [cardHolderName, setCardHolderName] = useState("");
-    const [creditCardNumber, setCreditCardNumber] = useState("");
-    const [expirationDate, setExpirationDate] = useState("");
-    const [securityDigits, setSecurityDigits] = useState("");
-    const [billingAddress, setBillingAddress] = useState("");
+  const [activeStep, setActiveStep] = useState(0);
 
-    let orderTotal = 0;
+  const [cardHolderName, setCardHolderName] = useState("");
+  const [creditCardNumber, setCreditCardNumber] = useState("");
+  const [expirationDate, setExpirationDate] = useState("");
+  const [securityDigits, setSecurityDigits] = useState("");
+  const [billingAddress, setBillingAddress] = useState("");
 
-    for (let i = 0; i < cartItems.length; i++) {
-        orderTotal += parseFloat(cartItems[i].currentPrice);
-    }
+  let orderTotal = 0;
 
+  for (let i = 0; i < cartItems.length; i++) {
+    orderTotal += parseFloat(cartItems[i].currentPrice);
+  }
 
     const myStyle = {
         activeBgColor: '#067F53',
@@ -30,41 +30,40 @@ function CheckoutForm({ cartItems }) {
         inactiveBgColor: '#687771'
     }
 
-    function clickNextStep() {
-        setActiveStep(activeStep+1);
-    }
+  function clickNextStep() {
+    setActiveStep(activeStep + 1);
+  }
 
-    function clickBackStep() {
-        setActiveStep(activeStep-1);
-    }
+  function clickBackStep() {
+    setActiveStep(activeStep - 1);
+  }
 
-    function handleCardHolderName(element) {
-        setCardHolderName(element.target.value);
-    }
+  function handleCardHolderName(element) {
+    setCardHolderName(element.target.value);
+  }
 
-    function handleCreditCardNumber(element) {
-        setCreditCardNumber(element.target.value);
-    }
+  function handleCreditCardNumber(element) {
+    setCreditCardNumber(element.target.value);
+  }
 
-    function handleExpirationDate(element) {
-        setExpirationDate(element.target.value);
-    }
+  function handleExpirationDate(element) {
+    setExpirationDate(element.target.value);
+  }
 
-    function handleSecurityDigits(element) {
-        setSecurityDigits(element.target.value);
-    }
+  function handleSecurityDigits(element) {
+    setSecurityDigits(element.target.value);
+  }
 
-    function handleBillingAddress(element) {
-        setBillingAddress(element.target.value);
-    }
+  function handleBillingAddress(element) {
+    setBillingAddress(element.target.value);
+  }
 
-        
   return (
     <>
         <>
             
             <Stepper
-                steps={[{ label: 'Personal Information' }, { label: 'Payment Information' }, { label: 'Confirm Purchase' }]}
+                steps={[{ label: 'Personal Information' }, { label: 'Payment Information' }, { label: 'Confirm Purchase' }, { label: 'Provide Feedback' }]}
                 activeStep={activeStep}
                 styleConfig={myStyle}
             />
@@ -79,15 +78,15 @@ function CheckoutForm({ cartItems }) {
                                 <Form.Control type="text" placeholder="Enter first name" />
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Last Name</Form.Label>
-                                <Form.Control type="text" placeholder="Enter last name" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Last Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter last name" />
+                  </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Date of Birth</Form.Label>
-                                <Form.Control type="date" placeholder="Password" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Date of Birth</Form.Label>
+                    <Form.Control type="date" placeholder="Password" />
+                  </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Affirm that all information provided is correct." />
@@ -106,10 +105,13 @@ function CheckoutForm({ cartItems }) {
                                 </Form.Text>
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="cell" placeholder="Enter phone number" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control
+                      type="cell"
+                      placeholder="Enter phone number"
+                    />
+                  </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Extension Number</Form.Label>
@@ -133,20 +135,32 @@ function CheckoutForm({ cartItems }) {
                                 <Form.Control onChange={handleCardHolderName} type="text" placeholder="Enter first name" />
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Credit Card Number</Form.Label>
-                                <Form.Control onChange={handleCreditCardNumber} type="text" placeholder="Enter last name" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Credit Card Number</Form.Label>
+                    <Form.Control
+                      onChange={handleCreditCardNumber}
+                      type="text"
+                      placeholder="Enter last name"
+                    />
+                  </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Expiration Date</Form.Label>
-                                <Form.Control onChange={handleExpirationDate} type="text" placeholder="Enter last name" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Expiration Date</Form.Label>
+                    <Form.Control
+                      onChange={handleExpirationDate}
+                      type="text"
+                      placeholder="Enter last name"
+                    />
+                  </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Security Digits</Form.Label>
-                                <Form.Control onChange={handleSecurityDigits} type="text" placeholder="Enter last name" />
-                            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Security Digits</Form.Label>
+                    <Form.Control
+                      onChange={handleSecurityDigits}
+                      type="text"
+                      placeholder="Enter last name"
+                    />
+                  </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Billing Address</Form.Label>
@@ -200,7 +214,7 @@ function CheckoutForm({ cartItems }) {
                         </Button>
                     </div>
                 </div>
-            :
+            : activeStep == 2 ?
             <>
                 <div className='container-sm row justify-content-center'>
                     <div class='col-5 mx-5'>
@@ -211,20 +225,20 @@ function CheckoutForm({ cartItems }) {
                                 <p>{cardHolderName}</p>
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Credit Card Number</Form.Label>
-                                <p>{creditCardNumber}</p>
-                            </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Credit Card Number</Form.Label>
+                      <p>{creditCardNumber}</p>
+                    </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Expiration Date</Form.Label>
-                                <p>{expirationDate}</p>
-                            </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Expiration Date</Form.Label>
+                      <p>{expirationDate}</p>
+                    </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Security Digits</Form.Label>
-                                <p>{securityDigits}</p>
-                            </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Security Digits</Form.Label>
+                      <p>{securityDigits}</p>
+                    </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Billing Address</Form.Label>
@@ -266,7 +280,7 @@ function CheckoutForm({ cartItems }) {
                     </div>
                 </div>
 
-            </> 
+            </> : <Survey />
             }
             </div>
         </>
