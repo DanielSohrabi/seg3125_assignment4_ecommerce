@@ -3,10 +3,18 @@ import Container from "react-bootstrap/Container";
 import Rating from "react-rating";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
 import "./Survey.css";
 
-export default function Survey() {
-  return (
+export default function Survey({ nextStep }) {
+  const [feedback, setFeedback] = useState(true);
+
+  const changeView = () => {
+    nextStep();
+    setFeedback(false);
+  };
+
+  return feedback ? (
     <Container className="d-flex justify-content-center text-center">
       <Card className="surveyCard">
         <h1>Thanks For Choosing Us</h1>
@@ -40,12 +48,17 @@ export default function Survey() {
             />
           </Form.Group>
           <div className="text-center mt-5">
-            <Button variant="dark" className="col-7">
+            <Button variant="dark" className="col-7" onClick={changeView}>
               Submit Your Feedback
             </Button>
           </div>
         </Form>
       </Card>
     </Container>
+  ) : (
+    <div>
+      <h1>Thanks for your feedback!</h1>
+      <h4>Please stay in touch at pearstore@gmail.com</h4>
+    </div>
   );
 }
