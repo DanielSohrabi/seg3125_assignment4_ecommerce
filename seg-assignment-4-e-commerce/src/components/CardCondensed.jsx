@@ -1,18 +1,12 @@
 import { useState } from 'react'
 import './Card.css'
 
-function Card(
+function CardCondensed(
     {
         cardData,
-        addToCart,
         removeFromCart,
-        shouldShowAddToCart
     }
 ) {
-
-    function handleAddToCartClick() {
-      addToCart(cardData)
-    }
 
     function handleRemoveFromCartClick() {
       removeFromCart(cardData)
@@ -29,19 +23,17 @@ function Card(
   
   return (
     <>
-      <div className='card-component'>
-        <img src={imageUrl}/>
-        <h1 className="text-start">{name}</h1>
-        <h2>${isOnSale ? previousPrice : currentPrice}</h2>
-        {shouldShowAddToCart ? <button
-          onClick={handleAddToCartClick}
-        >Add to Cart</button> : <button
+      <div className='card-component row'>
+        <img className="col-2" src={imageUrl}/>
+        <h1 className="text-start col-4">{name}</h1>
+        <h2 className="col-4">${isOnSale ? previousPrice : currentPrice}</h2>
+        <button 
+          className="col-2"
           onClick={handleRemoveFromCartClick}
-        >Remove from Cart</button>}
-
+        >Remove from Cart</button>
       </div>
     </>
   )
 }
 
-export default Card
+export default CardCondensed
