@@ -51,7 +51,7 @@ function Body({ searchQuery, addToCart, removeFromCart }) {
             {filteredData.map((currItemData) => (
               <div className="col-3">
                 <Card
-                  cardData={currItemData} 
+                  cardData={currItemData}
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}
                   shouldShowAddToCart={true}
