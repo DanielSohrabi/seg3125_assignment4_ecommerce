@@ -54,6 +54,7 @@ export default function App() {
         cartItems={cartItems}
         addToCart={addToCart}
         removeFromCart={removeFromCart}
+        setPageState={setPageState}
       />}
     </>
   );

@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import "./NavHeader.css"
 
 export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount, setPageState }) {
 
@@ -19,7 +20,7 @@ export default function NavHeader({ searchQuery, setSearchQuery, cartItemsCount,
       style={{ height: "100px" }}
     >
       <Container fluid>
-        <Navbar.Brand className="px-5">LOGO</Navbar.Brand>
+        <Navbar.Brand className="px-5 pearstore">pearStore 🍐</Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="flex-grow-1 justify-content-center">
             <Form className="d-flex w-50 mx-auto">

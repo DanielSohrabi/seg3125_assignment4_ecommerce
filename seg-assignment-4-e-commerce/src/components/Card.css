@@ -1,4 +1,73 @@
-.card-component {
-    background-color: aqua;
-    border-radius: 10px;
+* {
+    font-family: "Inter", sans-serif !important;
+}
+.card-custom {
+    border-radius: 20px !important;
+    width: 375px;
+    height: 500px !important;
+}
+
+.card-component-x {
+    height: 100px;
+    border-bottom-style: solid;
+    padding-bottom: 125px;
+}
+
+.button-1 {
+    margin-top: 5px;
+    margin-left: 20px;
+    background-color: rgb(255, 255, 255) !important;
+    border-style: none !important;
+    transition: all 0.5s !important;
+}
+
+.card-img-top {
+    /* height: px; */
+}
+
+.button-2 {
+    background-color: rgb(255, 255, 255) !important;
+    /* color: black !important; */
+    border-style: none !important;
+    transition: all 0.5s !important;
+    width: 100px !important;
+}
+
+.button-2:hover {
+    background-color: rgb(231, 231, 231) !important;
+    transform: scale(1.1) perspective(10px);
+    color:rgb(233, 233, 233);
+}
+
+.button-1:hover {
+    background-color: rgb(231, 231, 231) !important;
+    transform: scale(1.1) perspective(10px);
+    color:rgb(233, 233, 233);
+}
+
+.button-1:active {
+    transform: scale(1) perspective(10px);
+}
+
+.on-sale {
+    box-shadow: 0 4px 8px 0 rgba(216, 89, 89, 0.2), 0 6px 20px 0 rgba(196, 33, 33, 0.685);
+}
+
+.sale-text {
+    font-weight: bolder;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    position: relative;
+    bottom: 467px;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    text-shadow: 0 0 3px #000000;
+    background-color: rgb(82, 13, 13);
+    width: 375px;
+    right: 17px;
+}
+
+.card-img {
+    height:100px;
+    width:100px !important;
 }

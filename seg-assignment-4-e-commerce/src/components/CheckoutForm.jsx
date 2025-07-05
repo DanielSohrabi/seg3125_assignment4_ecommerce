@@ -5,6 +5,8 @@ import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import "./CheckoutForm.css"
+import PaymentPhoto from '../assets/USPaymentMethodsKlarna.JPG'
 
 function CheckoutForm({ cartItems }) {
     const [activeStep, setActiveStep] = useState(0);
@@ -23,7 +25,8 @@ function CheckoutForm({ cartItems }) {
 
 
     const myStyle = {
-        activeBgColor: '#000000'
+        activeBgColor: '#000000',
+        completedBgColor: '#808080' 
     }
 
     function clickNextStep() {
@@ -64,10 +67,10 @@ function CheckoutForm({ cartItems }) {
                 activeStep={activeStep}
                 styleConfig={myStyle}
             />
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center mt-3 py-5">
             {activeStep == 0 ?
-                <div className='container-sm row '>
-                    <div class='col-6'>
+                <div className='container-sm row justify-content-center mt-3'>
+                    <div class='col-5 mx-5'>
                         <h3>Personal</h3>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -91,7 +94,7 @@ function CheckoutForm({ cartItems }) {
                             
                         </Form>
                     </div>
-                    <div class='col-6'>
+                    <div class='col-5 mx-5'>
                         <h3>Contact</h3>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -114,13 +117,14 @@ function CheckoutForm({ cartItems }) {
 
                         </Form>
                     </div>
-                    <Button onClick={clickNextStep} variant="primary">
+                    <div className="my-3"/>
+                    <Button onClick={clickNextStep} className="mt-5 col-11" variant="dark">
                         Next
                     </Button>
                 </div>
             : activeStep == 1 ?
-                <div className='container-sm row '>
-                    <div class='col-6'>
+                <div className='container-sm row justify-content-center'>
+                    <div class='col-5 mx-5'>
                         <h3>Payment Information</h3>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -150,54 +154,55 @@ function CheckoutForm({ cartItems }) {
 
                         </Form>
                     </div>
-                    <div class='col-6'>
+                    <div class='col-5 mx-5'>
                         <h3>Delivery Options</h3>
                         <p>Shipping</p>
-                         <label>
+                         <label className="mx-3">
                             <input type="radio" name="myRadio" value="option1" />
                             {' Regular Shipping (1 week)'}
                         </label>
                         <br/>
-                        <label>
+                        <label className="mx-3">
                             <input type="radio" name="myRadio" value="option2" />
                             {' Express Shipping (2-3 days)'}
                         </label>
                         <br/>
-                        <label>
+                        <label className="mx-3">
                             <input type="radio" name="myRadio" value="option3" />
                             {' Urgent Shipping (1 day)'}
                         </label>
                         <br/><br/>
                         <p>Delivery Style</p>
-                         <label>
+                         <label className="mx-3">
                             <input type="radio" name="myRadio" value="option1" />
                             {' Doorbell, Request Signature'}
                         </label>
                         <br/>
-                        <label>
+                        <label className="mx-3">
                             <input type="radio" name="myRadio" value="option2" />
                             {' Doorbell, Leave Package'}
                         </label>
                         <br/>
-                        <label>
+                        <label className="mx-3">
                             <input type="radio" name="myRadio" value="option3" />
                             {' Phone Notification, Leave Package'}
                         </label>
-                        
+                        <div className="mt-4 pt-4"/>
+                        <img className="mx-5 px-4 py-3" src={PaymentPhoto}></img>
                     </div>
-                    <div className="row d-flex">
-                        <Button onClick={clickBackStep} variant="primary col-1">
+                    <div className="row d-flex mt-5">
+                        <Button onClick={clickBackStep} variant="dark" className="col-5 mx-auto">
                             Back
                         </Button>
-                        <Button onClick={clickNextStep} variant="primary col-1 mx-auto">
+                        <Button onClick={clickNextStep} variant="dark" className="col-5 mx-auto">
                             Next
                         </Button>
                     </div>
                 </div>
             :
             <>
-                <div className='container-sm row '>
-                    <div class='col-6'>
+                <div className='container-sm row justify-content-center'>
+                    <div class='col-5 mx-5'>
                         <h3>Order Details</h3>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -227,7 +232,7 @@ function CheckoutForm({ cartItems }) {
 
                         </Form>
                     </div>
-                    <div class='col-6'>
+                    <div class='col-5 mx-5'>
                         <h3>Order Summary</h3>
                         <div className="row">
                             <p className="col-6">{cartItems.map((currentItem) => (
@@ -250,11 +255,11 @@ function CheckoutForm({ cartItems }) {
                             
                         </div>
                     </div>
-                    <div className="row d-flex">
-                        <Button onClick={clickBackStep} variant="primary col-1">
+                    <div className="row d-flex mt-5">
+                        <Button onClick={clickBackStep} variant="dark" className="col-5 mx-auto">
                                 Back
                         </Button>
-                        <Button onClick={clickNextStep} variant="primary col-2 mx-auto">
+                        <Button onClick={clickNextStep} variant="dark" className="col-5 mx-auto">
                                 Confirm Order
                         </Button>
                     </div>
