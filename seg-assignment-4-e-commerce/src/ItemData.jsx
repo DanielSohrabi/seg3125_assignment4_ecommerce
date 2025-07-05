@@ -10,7 +10,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "1199",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "iPhone 14",
@@ -20,7 +20,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "999",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "iPad Mini",
@@ -30,7 +30,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "549",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "AirPods Pro",
@@ -40,7 +40,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: "1",
     currentPrice: "249",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "iPhone SE",
@@ -50,7 +50,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "429",
-    isOnSale: false,
+    sale: "",
   },
 
   // Samsung
@@ -62,7 +62,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: "1",
     currentPrice: "899",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Galaxy Tab S8",
@@ -72,7 +72,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: "1",
     currentPrice: "749",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Galaxy Buds 2",
@@ -82,7 +82,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "149",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Samsung Chromebook",
@@ -92,7 +92,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "499",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Galaxy A14",
@@ -102,7 +102,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "199",
-    isOnSale: false,
+    sale: "",
   },
 
   // Google
@@ -114,7 +114,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: "1",
     currentPrice: "699",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Pixel Buds Pro",
@@ -124,7 +124,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "199",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Pixelbook Go",
@@ -134,7 +134,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: "1",
     currentPrice: "849",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Pixel Tablet",
@@ -144,7 +144,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "599",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Pixel 6a",
@@ -154,7 +154,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: "1",
     currentPrice: "349",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
 
   // Other
@@ -166,7 +166,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "899",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Motorola G Power",
@@ -176,7 +176,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: "1",
     currentPrice: "249",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Fire HD 10",
@@ -186,7 +186,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "149",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Logitech MX Mouse",
@@ -196,7 +196,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "99",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Dell XPS 13",
@@ -206,10 +206,9 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "1099",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
 
-  // Repeat mix to reach 30 items (copies with minor changes)
   {
     name: "iPad 9th Gen",
     brand: FILTERS.brands.APPLE,
@@ -218,7 +217,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: "1",
     currentPrice: "429",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Galaxy Tab A8",
@@ -228,7 +227,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "279",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Google Nest Hub",
@@ -238,7 +237,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "129",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Apple Magic Keyboard",
@@ -248,7 +247,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "549",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Samsung Smart Monitor",
@@ -258,7 +257,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "599",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Google Pixel Slate",
@@ -268,7 +267,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: "1",
     currentPrice: "799",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Samsung Galaxy Watch 6",
@@ -278,7 +277,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "399",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: 'Apple iMac 24"',
@@ -288,7 +287,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "1299",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Lenovo Tab M10",
@@ -298,7 +297,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "189",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Google Pixel Fold",
@@ -308,7 +307,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "1799",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Samsung Galaxy Book3",
@@ -318,7 +317,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "1399",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Apple Pencil (2nd Gen)",
@@ -328,7 +327,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: "1",
     currentPrice: "129",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Google Pixel Buds A-Series",
@@ -338,7 +337,7 @@ export const placeholderCardData = [
     country: FILTERS.country.US,
     imageUrl: "1",
     currentPrice: "99",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Amazon Fire Max 11",
@@ -348,7 +347,7 @@ export const placeholderCardData = [
     country: FILTERS.country.OTHER,
     imageUrl: "1",
     currentPrice: "529",
-    isOnSale: false,
+    sale: "",
   },
   {
     name: "Samsung Galaxy A54",
@@ -358,6 +357,6 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: "1",
     currentPrice: "449",
-    isOnSale: true,
+    sale: FILTERS.sale.ON_SALE,
   },
 ];

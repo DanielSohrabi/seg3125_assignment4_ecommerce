@@ -9,6 +9,7 @@ function Body({ searchQuery }) {
     type: [],
     priceBracket: [],
     country: [],
+    sale: [],
   });
 
   const toggleFilter = (category, label) => {

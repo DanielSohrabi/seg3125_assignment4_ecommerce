@@ -22,6 +22,11 @@ export default function SideBar({ filters, toggleFilter }) {
     >
       <h4 className="text-center">Filters</h4>
       <Form className="filters">
+        <h5>Shop The Sale</h5>
+        {Object.values(FILTERS.sale).map((item) =>
+          renderCheckBox(CATEGORIES.SALE, item)
+        )}
+
         <h5>Category</h5>
         {Object.values(FILTERS.types).map((item) =>
           renderCheckBox(CATEGORIES.TYPES, item)

@@ -21,6 +21,9 @@ export const FILTERS = {
         US: "United States",
         CHINA: "China",
         OTHER: "Other"
+    },
+    sale: {
+        ON_SALE: "On Sale",
     }
 
 }
@@ -30,5 +33,6 @@ export const CATEGORIES = {
     BRANDS: "brand",
     TYPES: "type",
     PRICE_CATEGORY: "priceBracket",
-    COUNTRY: "country"
+    COUNTRY: "country",
+    SALE: "sale"
 }
