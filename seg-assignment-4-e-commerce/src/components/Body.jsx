@@ -4,27 +4,39 @@ import { placeholderCardData } from "../ItemData";
 import { React, useState } from "react";
 
 function Body({ searchQuery }) {
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState({
+    brand: [],
+    type: [],
+    priceBracket: [],
+    country: [],
+  });
 
-  const toggleFilter = (label) => {
-    setFilters((prev) =>
-      prev.includes(label)
-        ? prev.filter((item) => item !== label)
-        : [...prev, label]
-    );
+  const toggleFilter = (category, label) => {
+    setFilters((prev) => {
+      const categoryFilters = prev[category];
+      const updated = categoryFilters.includes(label)
+        ? categoryFilters.filter((item) => item !== label)
+        : [...categoryFilters, label];
+
+      return {
+        ...prev,
+        [category]: updated,
+      };
+    });
   };
 
   const filteredData = placeholderCardData.filter((item) => {
-    const filterCheck =
-      filters.length !== 0
-        ? filters.some((filter) => item.categories.includes(filter))
-        : true;
-
+    const matchesAllCategories = Object.entries(filters).every(
+      ([category, selectedValues]) => {
+        if (selectedValues.length === 0) return true;
+        return selectedValues.includes(item[category]);
+      }
+    );
     const matchesSearch =
       searchQuery.trim() === "" ||
       item.name.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return filterCheck && matchesSearch;
+    return matchesAllCategories && matchesSearch;
   });
 
   return (

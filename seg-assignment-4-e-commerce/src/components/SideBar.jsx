@@ -1,15 +1,16 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import "./SideBar.css";
+import { FILTERS, CATEGORIES } from "../FilterConstants";
 
 export default function SideBar({ filters, toggleFilter }) {
-  const renderCheckBox = (label) => {
+  const renderCheckBox = (category, label) => {
     return (
       <Form.Check
         type="checkbox"
         label={label}
-        checked={filters.includes(label)}
-        onChange={() => toggleFilter(label)}
+        checked={filters[category].includes(label)}
+        onChange={() => toggleFilter(category, label)}
       />
     );
   };
@@ -22,11 +23,21 @@ export default function SideBar({ filters, toggleFilter }) {
       <h4 className="text-center">Filters</h4>
       <Form className="filters">
         <h5>Category</h5>
-        {["Phones", "Laptops"].map((item) => renderCheckBox(item))}
-        <h5>Price</h5>
-        {["Under $1000", "$1000 and over"].map((item) => renderCheckBox(item))}
+        {Object.values(FILTERS.types).map((item) =>
+          renderCheckBox(CATEGORIES.TYPES, item)
+        )}
         <h5>Brand</h5>
-        {["Apple", "Samsung"].map((item) => renderCheckBox(item))}
+        {Object.values(FILTERS.brands).map((item) =>
+          renderCheckBox(CATEGORIES.BRANDS, item)
+        )}
+        <h5>Price Range</h5>
+        {Object.values(FILTERS.priceCategory).map((item) =>
+          renderCheckBox(CATEGORIES.PRICE_CATEGORY, item)
+        )}
+        <h5>Manufactured In</h5>
+        {Object.values(FILTERS.country).map((item) =>
+          renderCheckBox(CATEGORIES.COUNTRY, item)
+        )}
       </Form>
     </div>
   );
