@@ -2,7 +2,7 @@ import Card from "./Card";
 import SideBar from "./SideBar";
 import { placeholderCardData, testArray } from "../ItemData";
 
-function Body() {
+function Body({ addToCart, removeFromCart }) {
   return (
     <>
       <div className="d-flex">
@@ -13,7 +13,12 @@ function Body() {
           <div className="row gx-3 gy-3">
             {testArray.map((currItemData) => (
               <div className="col-3">
-                <Card cardData={currItemData} />
+                <Card 
+                  cardData={currItemData} 
+                  addToCart={addToCart}
+                  removeFromCart={removeFromCart}
+                  shouldShowAddToCart={true}
+                />
               </div>
             ))}
           </div>
