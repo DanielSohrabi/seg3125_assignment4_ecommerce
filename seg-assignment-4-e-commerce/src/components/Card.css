@@ -3,8 +3,8 @@
 }
 .card-custom {
     border-radius: 20px !important;
-    width: 350px;
-    height: 500px !important;
+    width: 18.2vw;
+    height: 53.3vh !important;
 }
 
 .card-component-x {
@@ -63,7 +63,7 @@
     font-size: 48px;
     text-shadow: 0 0 3px #000000;
     background-color: #055237;
-    width: 350px;
+    width: 18.2vw;
     right: 17px;
 }
 
