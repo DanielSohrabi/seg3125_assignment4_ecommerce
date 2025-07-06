@@ -4,7 +4,7 @@ import airpods2nd from "./assets/airpods2nd.png";
 import airpodsmax from "./assets/airpodsmax.png";
 import ipadmini from "./assets/ipadmini.jpg";
 import magicmouse from "./assets/magicmouse.jpg";
-import galaxywatch from "./assets/galaxywatch.jpg"
+import galaxywatch from "./assets/galaxywatch.jpg";
 import fitbitversa from "./assets/fitbitversa.png";
 import nestaudio from "./assets/nestaudio.png";
 import pixeltablet from "./assets/pixeltablet.jpg";
@@ -56,7 +56,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CANADA,
     imageUrl: magicmouse,
     currentPrice: "129",
-    sale: FILTERS.sale.ON_SALE,
+    sale: "",
   },
   {
     name: "AirPods 2nd",
@@ -66,7 +66,7 @@ export const placeholderCardData = [
     country: FILTERS.country.CHINA,
     imageUrl: airpods2nd,
     currentPrice: "129",
-    sale: "",
+    sale: FILTERS.sale.ON_SALE,
   },
 
   // Samsung
@@ -78,7 +78,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: galaxywatch,
     currentPrice: "399",
-    sale: FILTERS.sale.ON_SALE,
+    sale: "",
   },
   {
     name: "Buds 2 Pro",
@@ -130,7 +130,7 @@ export const placeholderCardData = [
     country: FILTERS.country.VIETNAM,
     imageUrl: pixelwatch,
     currentPrice: "649",
-    sale: "",
+    sale: FILTERS.sale.ON_SALE,
   },
   {
     name: "Pixel Buds A",
