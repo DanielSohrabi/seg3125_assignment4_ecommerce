@@ -6,13 +6,19 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import "./Survey.css";
 
-export default function Survey({ nextStep }) {
+export default function Survey({ nextStep, setCartItemsCount, setCartItems, setPageState }) {
   const [feedback, setFeedback] = useState(true);
 
   const changeView = () => {
     nextStep();
     setFeedback(false);
   };
+
+  function completePurchase() {
+    setCartItemsCount(0);
+    setCartItems([]);
+    setPageState("Shop")
+  }
 
   return feedback ? (
     <Container className="d-flex justify-content-center text-center">
@@ -57,8 +63,11 @@ export default function Survey({ nextStep }) {
     </Container>
   ) : (
     <div>
-      <h1>Thanks for your feedback!</h1>
-      <h4>Please stay in touch at pearstore@gmail.com</h4>
+      <h1 className='text-center'>Thanks for your feedback!</h1>
+      <h4 className='text-center'>Please stay in touch at pearstore@gmail.com</h4>
+      <Button variant="dark" className="col-12 mt-5" onClick={completePurchase}>
+        Back to Shop
+      </Button>
     </div>
   );
 }

@@ -19,8 +19,9 @@
     background-color: rgb(255, 255, 255) !important;
     border-style: none !important;
     transition: all 0.5s !important;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100px;
 }
 
 .card-img-top {
@@ -47,6 +48,7 @@
     background-color: rgb(231, 231, 231) !important;
     transform: scale(1.1) perspective(10px);
     color:rgb(233, 233, 233);
+    border-radius: 100px;
 }
 
 .button-1:active {

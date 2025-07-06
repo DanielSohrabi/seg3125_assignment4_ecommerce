@@ -9,7 +9,7 @@ import "./CheckoutForm.css";
 import PaymentPhoto from "../assets/USPaymentMethodsKlarna.JPG";
 import Survey from "./Survey";
 
-function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
+function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBackClick, setPageState}) {
   const [activeStep, setActiveStep] = useState(0);
 
   const [cardHolderName, setCardHolderName] = useState("");
@@ -30,11 +30,15 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
     inactiveBgColor: "#687771",
   };
 
+  function clickBackCart() {
+    handleHomeBackClick();
+  }
+
   function clickNextStep() {
-    if (activeStep == 3) {
-        setCartItems([]);
-        setCartItemsCount(0);
-    }
+    // if (activeStep == 3) {
+    //     setCartItems([]);
+    //     setCartItemsCount(0);
+    // }
     setActiveStep(activeStep + 1);
   }
 
@@ -75,7 +79,7 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
           activeStep={activeStep}
           styleConfig={myStyle}
         />
-        <div className="d-flex justify-content-center mt-3 py-5">
+        <div className="d-flex justify-content-center mt-3 pt-5">
           {activeStep == 0 ? (
             <div className="container-sm row justify-content-center mt-3">
               <div class="col-5 mx-5">
@@ -139,6 +143,9 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
                 variant="dark"
               >
                 Next
+              </Button>
+             <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+                Back to Shop
               </Button>
             </div>
           ) : activeStep == 1 ? (
@@ -245,6 +252,9 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
                   Next
                 </Button>
               </div>
+              <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+                Back to Shop
+              </Button>
             </div>
           ) : activeStep == 2 ? (
             <>
@@ -321,10 +331,13 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount }) {
                     Confirm Order
                   </Button>
                 </div>
+              <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+                Back to Shop
+              </Button>
               </div>
             </>
           ) : (
-            <Survey nextStep={clickNextStep} />
+            <Survey nextStep={clickNextStep} setCartItemsCount={setCartItemsCount} setCartItems={setCartItems} setPageState={setPageState}/>
           )}
         </div>
       </>

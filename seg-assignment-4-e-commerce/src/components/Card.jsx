@@ -85,7 +85,9 @@ function Card({ cardData, addToCart, removeFromCart, shouldShowAddToCart }) {
                 Remove from Cart
               </Button>
             )}
+            
           </div>
+        <p>New Intel i7-7700 Chip, Cutting Tecddddh</p>
         </div>
       </div>
     </>

@@ -18,7 +18,7 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState, setCartItems
   return (
     <>
       <div className="d-flex">
-        <div className="flex-grow-1 p-4">
+        <div className="flex-grow-1 pt-4 px-4">
           <div className="row gx-3 gy-3">
             {cartItems.length == 0 ? 
                 <h1 className="text-center py-5 my-5">Your cart is empty, nothing to see here!</h1> :
@@ -39,17 +39,20 @@ function Cart({ cartItems, addToCart, removeFromCart, setPageState, setCartItems
                 ))}
                 <Button variant='dark'
                     onClick={handleCheckoutClick}
-                >Checkout</Button>
+                >Proceed to Checkout</Button>
+                <Button className="px-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+                  Back to Shop
+                </Button>
             </> : 
             <CheckoutForm
                 cartItems={cartItems}
                 setCartItems={setCartItems}
                 setCartItemsCount={setCartItemsCount}
+                handleHomeBackClick={handleHomeBackClick}
+                setPageState={setPageState}
             />
             }
-            <Button className="px-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
-              Back to Shop
-            </Button>
+
           </div>
         </div>
       </div>

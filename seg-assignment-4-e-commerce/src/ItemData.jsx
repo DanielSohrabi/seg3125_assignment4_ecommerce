@@ -20,6 +20,7 @@ export const placeholderCardData = [
   // Apple
   {
     name: "Apple Watch 9",
+    description: "Comfortable, High Tech, New High-Tech Watch Chip",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.WATCHES,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -30,6 +31,7 @@ export const placeholderCardData = [
   },
   {
     name: "AirPods Max",
+    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -40,6 +42,7 @@ export const placeholderCardData = [
   },
   {
     name: "iPad Mini",
+    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -50,6 +53,7 @@ export const placeholderCardData = [
   },
   {
     name: "Magic Mouse",
+    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -60,6 +64,7 @@ export const placeholderCardData = [
   },
   {
     name: "AirPods 2nd",
+    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -72,6 +77,7 @@ export const placeholderCardData = [
   // Samsung
   {
     name: "Galaxy Watch",
+    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.WATCHES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -82,6 +88,7 @@ export const placeholderCardData = [
   },
   {
     name: "Buds 2 Pro",
+    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -92,6 +99,7 @@ export const placeholderCardData = [
   },
   {
     name: "Galaxy Tab S8",
+    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -102,6 +110,7 @@ export const placeholderCardData = [
   },
   {
     name: "Smart Keyboard",
+    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -112,6 +121,7 @@ export const placeholderCardData = [
   },
   {
     name: "Buds Live",
+    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -124,6 +134,7 @@ export const placeholderCardData = [
   // Google
   {
     name: "Pixel Watch",
+    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.WATCHES,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -134,6 +145,7 @@ export const placeholderCardData = [
   },
   {
     name: "Pixel Buds A",
+    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -144,6 +156,7 @@ export const placeholderCardData = [
   },
   {
     name: "Pixel Buds Pro",
+    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.HEADPHONES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -154,6 +167,7 @@ export const placeholderCardData = [
   },
   {
     name: "Pixel Tablet",
+    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -164,6 +178,7 @@ export const placeholderCardData = [
   },
   {
     name: "Nest Audio",
+    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -176,6 +191,7 @@ export const placeholderCardData = [
   // Other
   {
     name: "Fitbit Versa",
+    description: "",
     brand: FILTERS.brands.OTHER,
     type: FILTERS.types.WATCHES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -183,45 +199,5 @@ export const placeholderCardData = [
     imageUrl: fitbitversa,
     currentPrice: "229",
     sale: FILTERS.sale.ON_SALE,
-  },
-  // {
-  //   name: "Sony WH-1000X",
-  //   brand: FILTERS.brands.OTHER,
-  //   type: FILTERS.types.HEADPHONES,
-  //   priceBracket: FILTERS.priceCategory.ABV_500,
-  //   country: FILTERS.country.CANADA,
-  //   imageUrl: "1",
-  //   currentPrice: "548",
-  //   sale: "",
-  // },
-  // {
-  //   name: "JBL Flip 6",
-  //   brand: FILTERS.brands.OTHER,
-  //   type: FILTERS.types.ACCESSORIES,
-  //   priceBracket: FILTERS.priceCategory.UND_500,
-  //   country: FILTERS.country.CHINA,
-  //   imageUrl: "1",
-  //   currentPrice: "129",
-  //   sale: "",
-  // },
-  // {
-  //   name: "Logi MX3",
-  //   brand: FILTERS.brands.OTHER,
-  //   type: FILTERS.types.ACCESSORIES,
-  //   priceBracket: FILTERS.priceCategory.UND_500,
-  //   country: FILTERS.country.CANADA,
-  //   imageUrl: "1",
-  //   currentPrice: "99",
-  //   sale: FILTERS.sale.ON_SALE,
-  // },
-  // {
-  //   name: "Anker Q30",
-  //   brand: FILTERS.brands.OTHER,
-  //   type: FILTERS.types.HEADPHONES,
-  //   priceBracket: FILTERS.priceCategory.UND_500,
-  //   country: FILTERS.country.OTHER,
-  //   imageUrl: "1",
-  //   currentPrice: "79",
-  //   sale: "",
-  // },
-];
+  }
+]
