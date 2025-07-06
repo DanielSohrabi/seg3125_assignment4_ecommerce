@@ -48,7 +48,7 @@ function Body({ searchQuery, addToCart, removeFromCart }) {
   return (
     <>
       <Alert variant="warning" onClose={() => setShow(false)} dismissible>
-        <Alert.Heading><h1 className="text-center alertthing">🍐 SHOP THE HUGE SALE FOR A LIMITED TIME ONLY!</h1></Alert.Heading>
+        <Alert.Heading><h1 className="text-center alertthing">🍐 SHOP OUR HUGE SALE FOR A LIMITED TIME ONLY!</h1></Alert.Heading>
       </Alert>
       <div className="d-flex px-3">
         <div style={{ width: "280px" }}>
