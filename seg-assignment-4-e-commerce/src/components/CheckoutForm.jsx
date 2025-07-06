@@ -9,7 +9,13 @@ import "./CheckoutForm.css";
 import PaymentPhoto from "../assets/USPaymentMethodsKlarna.JPG";
 import Survey from "./Survey";
 
-function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBackClick, setPageState}) {
+function CheckoutForm({
+  cartItems,
+  setCartItems,
+  setCartItemsCount,
+  handleHomeBackClick,
+  setPageState,
+}) {
   const [activeStep, setActiveStep] = useState(0);
 
   const [cardHolderName, setCardHolderName] = useState("");
@@ -84,19 +90,19 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
             <div className="container-sm row justify-content-center mt-3">
               <div class="col-5 mx-5">
                 <h3>Personal</h3>
-                <Form>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>First Name</Form.Label>
+                <Form key="PersonalInfo">
+                  <Form.Group className="mb-3" controlId="formBasicEmail77">
+                    <Form.Label>First Name </Form.Label>
                     <Form.Control type="text" placeholder="Enter first name" />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Last Name</Form.Label>
+                  <Form.Group className="mb-3" controlId="formBasicEmail87">
+                    <Form.Label>Last Name </Form.Label>
                     <Form.Control type="text" placeholder="Enter last name" />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Date of Birth</Form.Label>
+                  <Form.Group className="mb-3" controlId="formBasicPassword0">
+                    <Form.Label>Date of Birth </Form.Label>
                     <Form.Control type="date" placeholder="Password" />
                   </Form.Group>
 
@@ -119,7 +125,7 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                     </Form.Text>
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-3" controlId="formBasicPassword54">
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control
                       type="cell"
@@ -127,7 +133,7 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-3" controlId="formBasicPassword55">
                     <Form.Label>Extension Number</Form.Label>
                     <Form.Control
                       type="cell"
@@ -144,7 +150,11 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
               >
                 Next
               </Button>
-             <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+              <Button
+                className="px-5 mt-5 backToShop"
+                onClick={handleHomeBackClick}
+                variant="secondary"
+              >
                 Back to Shop
               </Button>
             </div>
@@ -153,21 +163,21 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
               <div class="col-5 mx-5">
                 <h3>Payment Information</h3>
                 <Form>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group className="mb-3" controlId="formBasicEmail9">
                     <Form.Label>Card Holder Name</Form.Label>
                     <Form.Control
                       onChange={handleCardHolderName}
                       type="text"
-                      placeholder="Enter first name"
+                      placeholder="Enter cardholder name"
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Group className="mb-3" controlId="formBasicEmail8">
                     <Form.Label>Credit Card Number</Form.Label>
                     <Form.Control
                       onChange={handleCreditCardNumber}
                       type="text"
-                      placeholder="Enter last name"
+                      placeholder="Enter card number"
                     />
                   </Form.Group>
 
@@ -176,25 +186,25 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                     <Form.Control
                       onChange={handleExpirationDate}
                       type="text"
-                      placeholder="Enter last name"
+                      placeholder="Enter expiration date"
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-3" controlId="formBasicPassword1">
                     <Form.Label>Security Digits</Form.Label>
                     <Form.Control
                       onChange={handleSecurityDigits}
                       type="text"
-                      placeholder="Enter last name"
+                      placeholder="Enter CVC"
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-3" controlId="formBasicPassword2">
                     <Form.Label>Billing Address</Form.Label>
                     <Form.Control
                       onChange={handleBillingAddress}
                       type="text"
-                      placeholder="Enter last name"
+                      placeholder="Enter billing address"
                     />
                   </Form.Group>
                 </Form>
@@ -220,17 +230,17 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                 <br />
                 <p>Delivery Style</p>
                 <label className="mx-3">
-                  <input type="radio" name="myRadio" value="option1" />
+                  <input type="radio" name="myRadio1" value="option1" />
                   {" Doorbell, Request Signature"}
                 </label>
                 <br />
                 <label className="mx-3">
-                  <input type="radio" name="myRadio" value="option2" />
+                  <input type="radio" name="myRadio1" value="option2" />
                   {" Doorbell, Leave Package"}
                 </label>
                 <br />
                 <label className="mx-3">
-                  <input type="radio" name="myRadio" value="option3" />
+                  <input type="radio" name="myRadio1" value="option3" />
                   {" Phone Notification, Leave Package"}
                 </label>
                 <div className="mt-4 pt-4" />
@@ -252,7 +262,11 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                   Next
                 </Button>
               </div>
-              <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
+              <Button
+                className="px-5 mt-5 backToShop"
+                onClick={handleHomeBackClick}
+                variant="secondary"
+              >
                 Back to Shop
               </Button>
             </div>
@@ -267,22 +281,22 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                       <p>{cardHolderName}</p>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicCredit">
                       <Form.Label>Credit Card Number</Form.Label>
                       <p>{creditCardNumber}</p>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="formBasicExp">
                       <Form.Label>Expiration Date</Form.Label>
                       <p>{expirationDate}</p>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="formBasicSecurity">
                       <Form.Label>Security Digits</Form.Label>
                       <p>{securityDigits}</p>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="formBasicBilling">
                       <Form.Label>Billing Address</Form.Label>
                       <p>{billingAddress}</p>
                     </Form.Group>
@@ -331,13 +345,22 @@ function CheckoutForm({ cartItems, setCartItems, setCartItemsCount, handleHomeBa
                     Confirm Order
                   </Button>
                 </div>
-              <Button className="px-5 mt-5 backToShop" onClick={handleHomeBackClick} variant="secondary">
-                Back to Shop
-              </Button>
+                <Button
+                  className="px-5 mt-5 backToShop"
+                  onClick={handleHomeBackClick}
+                  variant="secondary"
+                >
+                  Back to Shop
+                </Button>
               </div>
             </>
           ) : (
-            <Survey nextStep={clickNextStep} setCartItemsCount={setCartItemsCount} setCartItems={setCartItems} setPageState={setPageState}/>
+            <Survey
+              nextStep={clickNextStep}
+              setCartItemsCount={setCartItemsCount}
+              setCartItems={setCartItems}
+              setPageState={setPageState}
+            />
           )}
         </div>
       </>

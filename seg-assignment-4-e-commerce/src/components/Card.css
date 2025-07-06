@@ -4,7 +4,7 @@
 .card-custom {
     border-radius: 20px !important;
     width: 18.2vw;
-    height: 53.3vh !important;
+    height: 59vh !important;
 }
 
 .card-component-x {
@@ -16,7 +16,7 @@
 .button-1 {
     margin-top: 5px;
     margin-left: 0.25rem;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: rgba(255, 255, 255, 0) !important;
     border-style: none !important;
     transition: all 0.5s !important;
     width: 5rem;

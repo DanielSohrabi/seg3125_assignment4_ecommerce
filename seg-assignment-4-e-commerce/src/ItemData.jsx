@@ -20,9 +20,9 @@ export const placeholderCardData = [
   // Apple
   {
     name: "Apple Watch 9",
-    description: "Comfortable, High Tech, New High-Tech Watch Chip",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.WATCHES,
+    description: "All New, Cutting Edge IP65 Display, With 64GB!",
     priceBracket: FILTERS.priceCategory.ABV_500,
     country: FILTERS.country.CHINA,
     imageUrl: applewatch,
@@ -31,9 +31,9 @@ export const placeholderCardData = [
   },
   {
     name: "AirPods Max",
-    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.ABV_500,
     country: FILTERS.country.CHINA,
     imageUrl: airpodsmax,
@@ -42,7 +42,7 @@ export const placeholderCardData = [
   },
   {
     name: "iPad Mini",
-    description: "",
+    description: "Ultrathin 4K OLED Display, 2000 Nits Brightness",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -53,7 +53,7 @@ export const placeholderCardData = [
   },
   {
     name: "Magic Mouse",
-    description: "",
+    description: "New and Improved Bluetooth 6.0, Maximizing Productivity",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -64,9 +64,9 @@ export const placeholderCardData = [
   },
   {
     name: "AirPods 2nd",
-    description: "",
     brand: FILTERS.brands.APPLE,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.CHINA,
     imageUrl: airpods2nd,
@@ -77,9 +77,9 @@ export const placeholderCardData = [
   // Samsung
   {
     name: "Galaxy Watch",
-    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.WATCHES,
+    description: "All New, Cutting Edge IP65 Display, With 64GB!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.VIETNAM,
     imageUrl: galaxywatch,
@@ -88,9 +88,9 @@ export const placeholderCardData = [
   },
   {
     name: "Buds 2 Pro",
-    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.VIETNAM,
     imageUrl: buds2pro,
@@ -99,7 +99,7 @@ export const placeholderCardData = [
   },
   {
     name: "Galaxy Tab S8",
-    description: "",
+    description: "Ultrathin 4K OLED Display, 2000 Nits Brightness",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -110,7 +110,7 @@ export const placeholderCardData = [
   },
   {
     name: "Smart Keyboard",
-    description: "",
+    description: "New and Improved Bluetooth 6.0, Maximizing Productivity",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -121,9 +121,9 @@ export const placeholderCardData = [
   },
   {
     name: "Buds Live",
-    description: "",
     brand: FILTERS.brands.SAMSUNG,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.VIETNAM,
     imageUrl: budslive,
@@ -134,9 +134,9 @@ export const placeholderCardData = [
   // Google
   {
     name: "Pixel Watch",
-    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.WATCHES,
+    description: "All New, Cutting Edge IP65 Display, With 64GB!",
     priceBracket: FILTERS.priceCategory.ABV_500,
     country: FILTERS.country.VIETNAM,
     imageUrl: pixelwatch,
@@ -145,9 +145,9 @@ export const placeholderCardData = [
   },
   {
     name: "Pixel Buds A",
-    description: "",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.VIETNAM,
     imageUrl: pixelbudsa,
@@ -155,10 +155,10 @@ export const placeholderCardData = [
     sale: "",
   },
   {
-    name: "Pixel Buds Pro",
-    description: "",
+    name: "Buds Pro ",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.HEADPHONES,
+    description: "Innovative Noise Cancellation Technology, All New Comfort!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.US,
     imageUrl: pixelbudspro,
@@ -167,7 +167,7 @@ export const placeholderCardData = [
   },
   {
     name: "Pixel Tablet",
-    description: "",
+    description: "Ultrathin 4K OLED Display, 2000 Nits Brightness",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.TABLET,
     priceBracket: FILTERS.priceCategory.ABV_500,
@@ -178,7 +178,7 @@ export const placeholderCardData = [
   },
   {
     name: "Nest Audio",
-    description: "",
+    description: "New and Improved Bluetooth 6.0, Maximizing Productivity",
     brand: FILTERS.brands.GOOGLE,
     type: FILTERS.types.ACCESSORIES,
     priceBracket: FILTERS.priceCategory.UND_500,
@@ -191,13 +191,13 @@ export const placeholderCardData = [
   // Other
   {
     name: "Fitbit Versa",
-    description: "",
     brand: FILTERS.brands.OTHER,
     type: FILTERS.types.WATCHES,
+    description: "All New, Cutting Edge IP65 Display, With 64GB!",
     priceBracket: FILTERS.priceCategory.UND_500,
     country: FILTERS.country.OTHER,
     imageUrl: fitbitversa,
     currentPrice: "229",
     sale: FILTERS.sale.ON_SALE,
-  }
-]
+  },
+];
