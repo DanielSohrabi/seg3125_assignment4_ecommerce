@@ -14,7 +14,7 @@ import pixelwatch from "./assets/pixelwatch.png";
 import budslive from "./assets/budslive.jpg";
 import smartkeyboard from "./assets/smartkeyboard.png";
 import galaxytabs8 from "./assets/galaxytabs8.jpg";
-import buds2pro from "./assets/buds2pro.avif";
+import buds2pro from "./assets/buds2pro.webp";
 
 export const placeholderCardData = [
   // Apple
