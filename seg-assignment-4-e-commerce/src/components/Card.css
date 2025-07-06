@@ -22,7 +22,9 @@
 }
 
 .card-img-top {
-    /* height: px; */
+    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+
 }
 
 .button-2 {
@@ -63,13 +65,14 @@
     font-size: 48px;
     text-shadow: 0 0 3px #000000;
     background-color: #055237;
-    width: 18.2vw;
+    width: 350px;
     right: 17px;
 }
 
 .card-img {
     height:100px;
     width:120px !important;
+    
 }
 
 .backToShop {
